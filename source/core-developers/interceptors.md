@@ -125,6 +125,7 @@ specified in the `<interceptors/>` tag.
 |[Default Workflow Interceptor](default-workflow-interceptor.html)|workflow|Calls the validate method in your Action class. If Action errors are created then it returns the INPUT view.|
 |[Exception Interceptor](exception-interceptor.html)|exception|Maps exceptions to a result.|
 |[Execute and Wait Interceptor](execute-and-wait-interceptor.html)|execAndWait|Executes the Action in the background and then sends the user off to an intermediate waiting page.|
+|[Fetch Metadata Interceptor](fetch-metadata-interceptor.html)|fetchMetadata|Implements the Fetch Metadata policy on incoming requests used to protect against CSRF, XSSI, and cross-origin information leaks.|
 |[File Upload Interceptor](file-upload-interceptor.html)|fileUpload|An Interceptor that adds easy access to file upload support.|
 |[I18n Interceptor](i18n-interceptor.html)|i18n|Remembers the locale selected for a user's session.|
 |[Logging Interceptor](logging-interceptor.html)|logger|Outputs the name of the Action.|
