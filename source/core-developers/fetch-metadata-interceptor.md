@@ -10,7 +10,7 @@ parent:
 
 ## Description
 
-An interceptor that implements Fetch Metadata policy on incoming requests used to protect against CSRF, XSSI, and cross-origin information leaks. Uses a deafault Resource Isolation Policy to filter the requests allowed to be processed.
+An interceptor that implements Fetch Metadata on incoming requests used to protect against CSRF, XSSI, and cross-origin information leaks. Uses a default Resource Isolation Policy to programmatically reject cross-origin requests.
 
 A Resource Isolation Policy is a strong defense-in-depth mechanism that prevents the resources on a server from being requested by external websites. This policy can be enabled for all endpoints of the application or the endpoints that are meant to be loaded in a cross-site context can be exempted from applying the policy.
 
