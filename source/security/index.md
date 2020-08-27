@@ -292,7 +292,7 @@ more in the Strict Method Invocation section of [Action Configuration](../core
 
 ### Resource Isolation Using Fetch Metadata
 
-Fetch Metadata is a mitigation against common cross origin attacks such as Cross-Site Request Forgery (CSRF).  It is a web platform security feature designed to help servers defend themselves against cross-origin attacks based on the preferred resource isolation policy. The browser provides information about the context of an HTTP request in a set of `Sec-Fetch-*` headers. This allows the server processing the request to make decisions on whether the request should be accepted or rejected based on the preferred resource isolation policy.
+Fetch Metadata is a mitigation against common cross origin attacks such as Cross-Site Request Forgery (CSRF).  It is a web platform security feature designed to help servers defend themselves against cross-origin attacks based on the preferred resource isolation policy. The browser provides information about the context of an HTTP request in a set of `Sec-Fetch-*` headers. This allows the server processing the request to make decisions on whether the request should be accepted or rejected based on the available resource isolation policies.
 
 A Resource Isolation  Policy prevents the resources on a server from being requested by external websites. This policy can be enabled for all endpoints of the application or the endpoints that are meant to be loaded in a cross-site context can be exempted from applying the policy. Read more about Fetch Metadata and resource isolation [here](https://web.dev/fetch-metadata/).
 
