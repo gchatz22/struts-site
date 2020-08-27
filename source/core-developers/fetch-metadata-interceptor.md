@@ -14,7 +14,7 @@ An interceptor that implements Fetch Metadata policy on incoming requests used t
 
 A Resource Isolation Policy is a strong defense-in-depth mechanism that prevents the resources on a server from being requested by external websites. This policy can be enabled for all endpoints of the application or the endpoints that are meant to be loaded in a cross-site context can be exempted from applying the policy.
 
-The browser provides information about the context of an HTTP request in a set of Sec-Fetch-* headers. This allows the server processing the request to make decisions on whether the request should be accepted or rejected based on the preferred resource isolation policy. At a very high level, the Fetch Metadata policy rejects requests with
+The browser provides information about the context of an HTTP request in a set of `Sec-Fetch-*` headers. This allows the server processing the request to make decisions on whether the request should be accepted or rejected based on the preferred resource isolation policy. At a very high level, the Fetch Metadata policy rejects requests with
 
 ```
 Sec-Fetch-Site == 'cross-site' AND (Sec-Fetch-Mode != 'navigate'/'nested-navigate' OR method NOT IN [GET, HEAD])
@@ -25,10 +25,8 @@ Fetch Metadata is supported in all major browsers
 
 ## Parameters
 
-- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic
-- `resourceIsolationPolicy` - Instance of Resource Isolation Policy class implementing the logic for the requests filtering
-- `VARY_HEADER_VALUE` - static vary header value for each vary response headers
-- `SC_FORBIDDEN` - static string 403 status code returned every time a request is rejected by Fetch Metadata
+- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should either be relative or absolute. No default value for field.
+- `resourceIsolationPolicy` - Instance of Resource Isolation Policy class implementing the logic for the requests filtering. The default value for this field is a new `DefaultIsolationPolicy`.
 
 ## Examples
 
@@ -38,7 +36,7 @@ Fetch Metadata is supported in all major browsers
 <action  name="someAction" class="com.examples.SomeAction">
     <interceptor-ref name="defaultStack">
     <interceptor-ref name="fetchMetadata">
-            <param name="exemptedPaths">path1,path2,path3 <param>
+            <param name="exemptedPaths">/path1,/path2,/path3 <param>
     <interceptor-ref>
     <result name="success">good_result.ftl</result>
 </action>
