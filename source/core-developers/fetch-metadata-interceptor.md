@@ -20,7 +20,7 @@ The browser provides information about the context of an HTTP request in a set o
 Sec-Fetch-Site == 'cross-site' AND (Sec-Fetch-Mode != 'navigate'/'nested-navigate' OR method NOT IN [GET, HEAD])
 ```
 
-Refer to [Implementing a Resource Isolation Policy](https://web.dev/fetch-metadata/#implementing-a-resource-isolation-policy) for further information on effectively implementing Fetch Metadata.
+Refer to [Implementing a Resource Isolation Policy](https://web.dev/fetch-metadata/#implementing-a-resource-isolation-policy) for further information on implementing effective Resource Isolation Policies.
 Fetch Metadata is supported in all major browsers
 
 ## Parameters
