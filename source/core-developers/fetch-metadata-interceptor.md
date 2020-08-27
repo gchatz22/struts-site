@@ -25,7 +25,7 @@ Fetch Metadata is supported in all major browsers
 
 ## Parameters
 
-- `exemptedPaths` (optional) - Set of opt out endpoints that are meant to serve cross-site traffic
+- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic
 - `resourceIsolationPolicy` - Instance of Resource Isolation Policy class implementing the logic for the requests filtering
 - `VARY_HEADER_VALUE` - static vary header value for each vary response headers
 - `SC_FORBIDDEN` - static string 403 status code returned every time a request is rejected by Fetch Metadata

@@ -116,9 +116,11 @@ specified in the `<interceptors/>` tag.
 |[Annotation Workflow Interceptor](annotation-workflow-interceptor.html)|annotationWorkflow|Invokes any annotated methods on the action.|
 |[Chaining Interceptor](chaining-interceptor.html)|chain|Makes the previous Action's properties available to the current Action. Commonly used together with <result type="chain"> (in the previous Action).|
 |[Checckbox Interceptor](checkbox-interceptor.html)|checkbox|Adds automatic checkbox handling code that detect an unchecked checkbox and add it as a parameter with a default (usually 'false') value. Uses a specially named hidden field to detect unsubmitted checkboxes. The default unchecked value is overridable for non-boolean value'd checkboxes.|
+|[COEP Interceptor](coep-interceptor.html)|coep|Implements the COEP policy on incoming requests used to protect a document from loading any non-same-origin resources which don't explicitly grant the document permission to be loaded.|
 |[Conversion Error Interceptor](conversion-error-interceptor.html)|conversionError|Adds conversion errors from the ActionContext to the Action's field errors|
 |[Cookie Interceptor](cookie-interceptor.html)|cookie|Inject cookie with a certain configurable name / value into action. (Since 2.0.7.)|
 |[Cookie Provider Interceptor](cookie-provider-interceptor.html)|cookieProvider|Transfer cookies from action to response (Since 2.3.15.)|
+|[COOP Interceptor](coop-interceptor.html)|coop|Implements the COOP policy on incoming requests used to isolate resources against side-channel attacks and information leaks.|
 |[Create Session Interceptor](create-session-interceptor.html)|createSession|Create an HttpSession automatically, useful with certain Interceptors that require a HttpSession to work properly (like the TokenInterceptor)|
 |[Clear Session Interceptor](clear-session-interceptor.html)|clearSession|This interceptor clears the HttpSession.|
 |[Debugging Interceptor](debugging-interceptor.html)|debugging|Provides several different debugging screens to provide insight into the data behind the page.|
