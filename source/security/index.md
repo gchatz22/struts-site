@@ -310,7 +310,6 @@ The recommended configuration for the policies are:
 ```
 Cross-Origin-Embedder-Policy: require-corp;
 Cross-Origin-Opener-Policy: same-origin;
-
 ```
 
 COOP and COEP are implemented in Struts using [CoopInterceptor](../core-developers/coop-interceptor.html) and [CoepInterceptor](../core-developers/coep-interceptor.html).
