@@ -25,8 +25,7 @@ Fetch Metadata is supported in all major browsers
 
 ## Parameters
 
-- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should either be relative or absolute. No default value for field.
-- `resourceIsolationPolicy` - Instance of Resource Isolation Policy class implementing the logic for the requests filtering. The default value for this field is a new `DefaultIsolationPolicy`.
+- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should contain leading slashes and must be relative. This field is empty by default.
 
 ## Examples
 

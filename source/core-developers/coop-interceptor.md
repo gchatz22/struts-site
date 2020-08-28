@@ -26,8 +26,8 @@ COOP is now supported by all major browsers.
 
 ## Parameters
 
-- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should either be relative or absolute.
-- `mode` - The policy mode COOP should followe
+- `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should contain leading slashes and must be relative. This field is empty by default.
+- `mode` - The policy mode COOP should follow
 
 ## Examples
 
