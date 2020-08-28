@@ -23,7 +23,7 @@ COEP is now supported by all major browsers.
 ## Parameters
 
 - `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should contain leading slashes and must be relative. This field is empty by default.
-- `enforcingMode` - Boolean variable allowing the user to let COEP operate in `enforcing`, which blocks both resource and reports violation, or `report-only` mode, which only reports violation. Default value for field is `false`.
+- `enforcingMode` - Boolean variable allowing the user to let COEP operate in `enforcing`, which blocks both resource and reports violations, or `report-only` mode, which only reports violations. Default value for field is `false`.
 - `disabled` - Boolean variable disabling and enabling COEP. Default value for field is `false`.
 
 ## Examples
