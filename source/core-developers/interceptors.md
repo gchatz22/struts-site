@@ -123,6 +123,7 @@ specified in the `<interceptors/>` tag.
 |[COOP Interceptor](coop-interceptor.html)|coop|Implements the Cross-Origin Opener Policy on incoming requests used to isolate resources against side-channel attacks and information leaks.|
 |[Create Session Interceptor](create-session-interceptor.html)|createSession|Create an HttpSession automatically, useful with certain Interceptors that require a HttpSession to work properly (like the TokenInterceptor)|
 |[Clear Session Interceptor](clear-session-interceptor.html)|clearSession|This interceptor clears the HttpSession.|
+|[Content Security Policy Interceptor](csp-interceptor.html)|csp|Implements the Content Security Policy on incoming requests used to protect against XSS and CSS injection attacks.|
 |[Debugging Interceptor](debugging-interceptor.html)|debugging|Provides several different debugging screens to provide insight into the data behind the page.|
 |[Default Workflow Interceptor](default-workflow-interceptor.html)|workflow|Calls the validate method in your Action class. If Action errors are created then it returns the INPUT view.|
 |[Exception Interceptor](exception-interceptor.html)|exception|Maps exceptions to a result.|
