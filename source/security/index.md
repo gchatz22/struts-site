@@ -290,14 +290,6 @@ This mechanism was introduced in version 2.5. It allows control what methods can
 via [Dynamic Method Invocation](../core-developers/action-configuration.html#dynamic-method-invocation). Please read 
 more in the Strict Method Invocation section of [Action Configuration](../core-developers/action-configuration.html).
 
-### Resource Isolation Using Fetch Metadata
-
-[Fetch Metadata](https://web.dev/fetch-metadata/#implementing-a-resource-isolation-policy) is a mitigation against common cross origin attacks such as Cross-Site Request Forgery (CSRF).  It is a web platform security feature designed to help servers defend themselves against cross-origin attacks based on the preferred resource isolation policy. The browser provides information about the context of an HTTP request in a set of `Sec-Fetch-*` headers. This allows the server processing the request to make decisions on whether the request should be accepted or rejected based on the available resource isolation policies.
-
-A Resource Isolation  Policy prevents the resources on a server from being requested by external websites. This policy can be enabled for all endpoints of the application or the endpoints that are meant to be loaded in a cross-site context can be exempted from applying the policy. Read more about Fetch Metadata and resource isolation [here](https://web.dev/fetch-metadata/).
-
-This mechanism is implemented in Struts using the [FetchMetadata Interceptor](../core-developers/fetch-metadata-interceptor.html). Refer to the documentation for [FetchMetadata Interceptor](../core-developers/fetch-metadata-interceptor.html) instructions on how to enable Fetch Metadata. 
-
 ### Content Security Policy
 
 [Content Security Policy](https://csp.withgoogle.com/docs/index.html) is a mitigation against XSS and CSS injection attacks. The recommended way to use CSP is to implement strict CSP.
@@ -332,19 +324,3 @@ The specified policy includes a `report-uri` directive. This should not be confu
 If a report-uri is not specified developers can see the violation in the dev tools of their browser. Reporting is an important aspect of adopting CSP, because the strict-dynamic CSP we’re proposing may break parts of an application (like using inline event handlers etc.) and need refactoring. Not having access to accurate CSP reports to know what is causing a violation will make developers less likely to adopt CSP. An example CSP report of a violation for a script block without a valid nonce-value looks like the above block.
 
 CSP is now supported in all major browsers.
-
-### Cross Origin Isolation with COOP and COEP
-
-[Cross-Origin Opener Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy) is a security mitigation that lets developers isolate their resources against side-channel attacks and information leaks. The COOP response header allows a document to request a new browsing context group to better isolate itself from other untrustworthy origins.
-
-[Cross-Origin Embedder Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy) prevents a document from loading any cross-origin resources which don't explicitly grant the document permission to be loaded. 
-
-COOP and COEP are independent mechanisms that can be enabled, tested and deployed separately. While enabling one doesn’t require developers to enable the other, when set together COOP and COEP allows developers to use powerful features (such as `SharedArrayBuffer`, `performance.measureMemory()` and the JS Self-Profiling API) securely, without worrying about side channel attacks like [Spectre](https://meltdownattack.com/). Further reading on [COOP/COEP](https://docs.google.com/document/d/1zDlfvfTJ_9e8Jdc8ehuV4zMEu9ySMCiTGMS9y0GU92k/edit#bookmark=id.uo6kivyh0ge2) and [why you need cross-origin isolation](https://web.dev/why-coop-coep/).
-
-The recommended configuration for the policies are:
-```
-Cross-Origin-Embedder-Policy: require-corp;
-Cross-Origin-Opener-Policy: same-origin;
-```
-
-COOP and COEP are implemented in Struts using [CoopInterceptor](../core-developers/coop-interceptor.html) and [CoepInterceptor](../core-developers/coep-interceptor.html).
