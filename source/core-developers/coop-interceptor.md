@@ -27,7 +27,11 @@ COOP is now supported by all major browsers.
 ## Parameters
 
 - `exemptedPaths` - Set of opt out endpoints that are meant to serve cross-site traffic. Paths should contain leading slashes and must be relative. This field is empty by default.
+<<<<<<< HEAD
 - `mode` - The policy mode COOP should follow
+=======
+- `mode` - The policy mode COOP should follow. Available modes are `same-origin`, `same-origin-allow-popups`, `unsafe-none`. Default mode is `same-origin`.
+>>>>>>> update-docs
 
 ## Examples
 
