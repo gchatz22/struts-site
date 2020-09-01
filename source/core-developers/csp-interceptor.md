@@ -31,7 +31,8 @@ Content-Security-Policy:
 
 ## Parameters
 
-- `enforcingMode` - Boolean variable the defines whether the `CspInterceptor` operates under enforcing or reporting mode. In enforcing mode, any event that violates the policy is not executed and if the policy specifies  a `reportUri` a JSON object with the details of the CSP violation is sent to the specified endpoint. In reporting mode, the event is executed normally and a CSP report is being sent to the defined `reportUri`. Default vaulue for variable is `false`.
+- `enforcingMode` - Boolean variable the defines whether the policy is enforced. In enforcing mode, scripts and stylesheets that violate the policy won't be executed and, if the `reportUri` directive is set, a violation report will be sent to it. In reporting mode, all scripts and stylesheets are allowed to executed with violation reports sent to the defined `reportUri`. Default value for variable is `false`.
+- `reportUri` - String URI where the CSP violation reports will be sent to. Path can be either relative with leading slashes or absolute. This field is empty by default.
 
 ## Examples
 
