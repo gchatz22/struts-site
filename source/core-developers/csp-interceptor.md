@@ -6,7 +6,7 @@ parent:
     url: interceptors.html
 ---
 
-# Fetch Metadata Interceptor
+# Content Security Policy Interceptor
 
 ## Description
 
