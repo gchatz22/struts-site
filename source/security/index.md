@@ -298,7 +298,6 @@ CSP is enabled by setting the `Content-Security-Policy` or `Content-Security-Pol
 
 Struts provides a nonce-based, strict-dynamic Content Security Policy. Policies of this type require scripts and stylesheets to have a nonce value that is checked by the browser at runtime. Scripts and stylesheets that have a nonce value that doesn't match that of the policy will be rejected by the policy. This prevents malicious scripts from running as long as an attacker doesn't know the unique nonce. In Struts, a new nonce is generated on each request and attached to every `<script>` and `<link>` element. By default, Struts' CSP blocks any inline event handlers (`onclick` etc.) and `javascript:` URIs, so adopting this policy requires refactoring these into script blocks or relaxing the policy by adding the `unsafe-inline` directive value. The default policy used is as follows:
 
-This is a samle CSP report:
 ```
 Content-Security-Policy:
   object-src 'none';
@@ -309,6 +308,7 @@ Content-Security-Policy:
 
 By default, the specified policy doesn't include a `report-uri` directive, but this field can be set on the `CspInterceptor`. In both enforcing and reporting modes, if a `report-uri` is specified, the browser will send violation reports containing details about the runtime of the violation to the specified `report-uri`.
 
+This is a sample CSP report:
 ```
 { "csp-report": {
 "document-uri":"http://localhost:8080/maven-example/searchForm.action",
@@ -322,6 +322,6 @@ By default, the specified policy doesn't include a `report-uri` directive, but t
 }
 ```
 
-Regardless of whether a report URI is specified, violation are always shown on DevTools. Reporting is an important aspect of adopting CSP because restrictive policies might require refactoring of existing dangerous code patterns (like  inline event handlers) before the policy can be set to enforcement mode. Developers are encouraged to set a report URI and examine violation reports before enforcing their policies.
+Regardless of whether a report URI is specified, violation are always shown on DevTools. Reporting is an important aspect of adopting CSP because restrictive policies might require refactoring of existing dangerous code patterns (like inline event handlers) before the policy can be set to enforcement mode. Developers are encouraged to set a report URI and examine violation reports before enforcing their policies.
 
 CSP is supported by all major browsers.
