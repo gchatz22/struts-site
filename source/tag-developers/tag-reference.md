@@ -56,17 +56,14 @@ Struts UI Tags display data in rich and reusable HTML.
 |             |[form](form-tag.html)                                |                        |                                       |
 |             |[hidden](hidden-tag.html)                            |                        |                                       |
 |             |[inputtransferselect](inputtransferselect-tag.html)  |                        |                                       |
-|             |[label](label-tag.html)                              |                        
-|                                       |
-|             |[link](link-tag.html)|
-|                                       |
+|             |[label](label-tag.html)                              |                        |                                       |
+|             |[link](link-tag.html)                                |                        |                                       |
 |             |[optiontransferselect](optiontransferselect-tag.html)|                        |                                       |
 |             |[optgroup](optgroup-tag.html)                        |                        |                                       |
 |             |[password](password-tag.html)                        |                        |                                       |
 |             |[radio](radio-tag.html)                              |                        |                                       |
 |             |[reset](reset-tag.html)                              |                        |                                       |
-|             |[script](script-tag.html)|
-|                                  |
+|             |[script](script-tag.html)                            |                        |                                       |
 |             |[select](select-tag.html)                            |                        |                                       |
 |             |[submit](submit-tag.html)                            |                        |                                       |
 |             |[textarea](textarea-tag.html)                        |                        |                                       |
