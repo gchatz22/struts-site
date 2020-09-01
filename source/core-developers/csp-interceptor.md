@@ -18,8 +18,9 @@ CSP can enabled by setting either the `Content-Security-Policy` or the `Content-
 
 Struts provides a `DefaultCspSettings` class that generates a strong strict-dynamic, nonce-based policy. This object will automatically generate a nonce value scoped to the current request. This design provides developers with a robust policy while giving them the flexibility to implement their own policy and use it with the CspInterceptor if they need to. The interceptor calls the `addCspHeaders` method of `DefaultCspSettings` which adds the CSP header to the response and attaches the nonce value in the request's session. The session's life cycle is tied to that of the request's.
 
-Refer to the security [index file](https://github.com/apache/struts-site/blob/master/source/security/index.md) for more infomation about the CSP policy and design.
+Refer to the security [index file](https://github.com/apache/struts-site/blob/master/source/security/index.md) for more infomation about the CSP policy and design. 
 
+Example policy set by `DefaultCspSettings`:
 ```
 Content-Security-Policy:
   object-src 'none';
